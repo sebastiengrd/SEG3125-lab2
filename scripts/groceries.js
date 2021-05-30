@@ -7,7 +7,9 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 1.99
+	        price: 1.99,
+	        organic: true
+
 	    },
 	    {
 	        name: "bread",
@@ -15,7 +17,8 @@
 	        glutenFree: false,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 2.35
+	        price: 2.35,
+	        organic: true
 	    },
 	    {
 	        name: "salmon",
@@ -23,7 +26,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "milk",
@@ -31,7 +35,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: false,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "nut butter",
@@ -39,7 +44,8 @@
 	        glutenFree: false,
 	        nutFree: false,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "water bottle",
@@ -47,7 +53,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "nut butter",
@@ -55,7 +62,8 @@
 	        glutenFree: true,
 	        nutFree: false,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "tomato",
@@ -63,7 +71,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "bacon",
@@ -71,7 +80,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: true
 	    },
 	    {
 	        name: "chicken wings",
@@ -79,7 +89,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00
+	        price: 10.00,
+	        organic: false
 	    }
 
 	];
@@ -92,6 +103,10 @@
 	function restrictListProducts(prods, restriction) {
 	    let product_names = [];
 	    for (let i = 0; i < prods.length; i += 1) {
+	        if (document.preferOrganic && prods[i].organic == false) {
+	            continue;
+	        }
+
 	        if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
 	            product_names.push(prods[i].name);
 	        } else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)) {
