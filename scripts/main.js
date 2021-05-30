@@ -36,7 +36,9 @@ function populateListProductChoices(slct1, slct2) {
     s2.innerHTML = "";
 
     // obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictListProducts(products, s1.value, preferOrganic);
+
+    optionArray.sort((a, b) => products.filter(elem => elem.name == a)[0].price - products.filter(elem => elem.name == b)[0].price)
 
     // for each item in the array, create a checkbox element, each containing information such as:
     // <input type="checkbox" name="product" value="Bread">
@@ -45,7 +47,7 @@ function populateListProductChoices(slct1, slct2) {
     for (i = 0; i < optionArray.length; i++) {
 
         var productName = optionArray[i];
-        var productPrice = products[i].price;
+        var productPrice = products.filter(elem => elem.name == productName)[0].price;
 
         // create the checkbox and add in HTML DOM
         var checkbox = document.createElement("input");

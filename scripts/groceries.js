@@ -53,7 +53,7 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00,
+	        price: 1.00,
 	        organic: true
 	    },
 	    {
@@ -100,11 +100,12 @@
 	// given restrictions provided, make a reduced list of products
 	// prices should be included in this list, as well as a sort based on price
 
-	function restrictListProducts(prods, restriction) {
+	function restrictListProducts(prods, restriction, onlyOrganic) {
 	    let product_names = [];
+
 	    for (let i = 0; i < prods.length; i += 1) {
-	        if (document.preferOrganic && prods[i].organic == false) {
-	            continue;
+	        if (onlyOrganic && !prods[i].organic) {
+	            continue
 	        }
 
 	        if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)) {
@@ -119,6 +120,8 @@
 	            product_names.push(prods[i].name);
 	        }
 	    }
+
+
 	    return product_names;
 	}
 
