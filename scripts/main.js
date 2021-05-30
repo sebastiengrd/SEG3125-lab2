@@ -31,9 +31,6 @@ function populateListProductChoices(slct1, slct2) {
     var s2 = document.getElementById(slct2);
     let preferOrganic = document.preferOrganic;
     if (preferOrganic == undefined) { preferOrganic = false; }
-    console.log(slct1)
-    console.log(slct2)
-    console.log(preferOrganic)
 
     // s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
@@ -48,6 +45,8 @@ function populateListProductChoices(slct1, slct2) {
     for (i = 0; i < optionArray.length; i++) {
 
         var productName = optionArray[i];
+        var productPrice = products[i].price;
+
         // create the checkbox and add in HTML DOM
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
@@ -60,6 +59,12 @@ function populateListProductChoices(slct1, slct2) {
         label.htmlFor = productName;
         label.appendChild(document.createTextNode(productName));
         s2.appendChild(label);
+
+        // create a label for the checkbox, and also add in HTML DOM
+        var price = document.createElement('div')
+        price.htmlFor = productPrice;
+        price.appendChild(document.createTextNode(productPrice + "$"));
+        s2.appendChild(price);
 
         // create a breakline node and add in HTML DOM
         s2.appendChild(document.createElement("br"));
