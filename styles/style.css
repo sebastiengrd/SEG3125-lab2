@@ -55,6 +55,19 @@ body {
     margin: 0px;
 }
 
+#Products {
+    border: none;
+}
+
+#displayProduct label {
+    margin-left: 1rem;
+}
+
+#displayProduct div {
+    display: inline;
+    margin-left: 1rem;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
