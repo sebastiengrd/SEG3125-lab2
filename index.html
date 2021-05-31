@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <div class="jumbotron text-center title-section">
         <h1>Food City</h1>
         <p>A place where everyone is happy! :)</p>
@@ -33,13 +34,13 @@
         <p>Tell us a bit about you.</p>
         Choose a Category:
         <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-            <option value=""></option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="GlutenFree">GlutenFree</option>
-            <option value="NutFree">NutFree</option>Free</option>
-            <option value="LactoseFree">LactoseFree</option>
-            <option value="None">None</option>
-        </select>
+                <option value=""></option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="GlutenFree">GlutenFree</option>
+                <option value="NutFree">NutFree</option>Free</option>
+                <option value="LactoseFree">LactoseFree</option>
+                <option value="None">None</option>
+            </select>
         <br>
         <p>Only show organic products <input type="checkbox" onchange="checkboxPreferOrganicChanged(event)"></p>
     </div>
@@ -50,14 +51,19 @@
         Choose items to buy:
         <div id="displayProduct"></div>
         <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		    Add selected items to cart.
-	    </button>
+                Add selected items to cart.
+            </button>
     </div>
 
     <div id="Cart" class="tabcontent">
         <h3>Cart</h3>
         <p>Here is your cart.</p>
         <div id="displayCart"></div>
+    </div>
+
+
+    <div class="footer container text-center">
+        <p>Made by Sébastien Girard for the SEG3125 course</p>
     </div>
 
     <script src="scripts/groceries.js"></script>
