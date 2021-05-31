@@ -87,11 +87,11 @@ function selectedItems() {
 
     // build list of selected item
     var para = document.createElement("P");
-    para.innerHTML = "You selected : ";
+    para.innerHTML = "<b>You selected : </b><br>";
     para.appendChild(document.createElement("br"));
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
-            para.appendChild(document.createTextNode(ele[i].value));
+            para.appendChild(document.createTextNode(ele[i].value + "   -   " + products.filter(elem => elem.name == ele[i].value)[0].price + "$"));
             para.appendChild(document.createElement("br"));
             chosenProducts.push(ele[i].value);
         }
@@ -99,7 +99,7 @@ function selectedItems() {
 
     // add paragraph and total price
     c.appendChild(para);
-    c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+    c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts) + "$"));
 
 }
 

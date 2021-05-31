@@ -2,7 +2,7 @@
 	// A set of ingredients should be added to products		 
 
 	var products = [{
-	        name: "brocoli",
+	        name: "organic brocoli",
 	        vegetarian: true,
 	        glutenFree: true,
 	        nutFree: true,
@@ -26,7 +26,7 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00,
+	        price: 13.99,
 	        organic: true
 	    },
 	    {
@@ -35,16 +35,16 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: false,
-	        price: 10.00,
+	        price: 6.67,
 	        organic: true
 	    },
 	    {
-	        name: "nut butter",
+	        name: "organic nut butter",
 	        vegetarian: true,
 	        glutenFree: false,
 	        nutFree: false,
 	        lactoseFree: true,
-	        price: 10.00,
+	        price: 12.95,
 	        organic: true
 	    },
 	    {
@@ -53,16 +53,16 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 1.00,
+	        price: 0.99,
 	        organic: true
 	    },
 	    {
-	        name: "nut butter",
+	        name: "organic salad",
 	        vegetarian: true,
 	        glutenFree: true,
 	        nutFree: false,
 	        lactoseFree: true,
-	        price: 10.00,
+	        price: 3.99,
 	        organic: true
 	    },
 	    {
@@ -71,8 +71,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00,
-	        organic: true
+	        price: 1.00,
+	        organic: false
 	    },
 	    {
 	        name: "bacon",
@@ -80,7 +80,7 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00,
+	        price: 13.99,
 	        organic: true
 	    },
 	    {
@@ -89,8 +89,8 @@
 	        glutenFree: true,
 	        nutFree: true,
 	        lactoseFree: true,
-	        price: 10.00,
-	        organic: false
+	        price: 11.66,
+	        organic: true
 	    }
 
 	];
